@@ -19,8 +19,7 @@ def save_entity(entity):
     db.close()
     return jsonify({'id': event_id}),201
   else: # is a GET
-    # return jsonify(db.all())
-    return abort(404)
+    return jsonify(db.all())
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
